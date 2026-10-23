@@ -1,0 +1,350 @@
+
+/* Basic Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #172033;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar */
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.navigation {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 25px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.brand-logo {
+    color: #172033;
+    font-size: 23px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.brand-logo span {
+    color: #5b5ce2;
+}
+
+.navigation-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+}
+
+.navigation-links a {
+    color: #475569;
+    font-size: 15px;
+}
+
+.navigation-links a:hover,
+.footer-links a:hover {
+    color: #5b5ce2;
+}
+
+.signup-button {
+    background-color: #5b5ce2;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 7px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Hero Section */
+.hero-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 65px 25px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 45px;
+}
+
+.hero-content {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.hero-label {
+    color: #5b5ce2;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: clamp(35px, 4vw, 55px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero-content h1 span {
+    color: #5b5ce2;
+}
+
+.hero-description {
+    color: #64748b;
+    font-size: 17px;
+    max-width: 480px;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.start-button,
+.learn-button {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.start-button {
+    background-color: #5b5ce2;
+    color: white;
+}
+
+.learn-button {
+    color: #5b5ce2;
+    border: 1px solid #5b5ce2;
+}
+
+.hero-image-container {
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 0;
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* Features Section */
+.features-section {
+    background-color: #f6f7ff;
+    padding: 55px 25px 65px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading > p {
+    color: #5b5ce2;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    margin-top: 8px;
+}
+
+.feature-list {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    flex-grow: 1;
+    flex-basis: 250px;
+    box-shadow: 0 5px 18px #1720330a;
+}
+
+.feature-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+/* Footer */
+.site-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    padding: 24px 25px;
+    background-color: #172033;
+    color: #e2e8f0;
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: #e2e8f0;
+    font-size: 14px;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 700px) {
+
+    .navigation {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 18px;
+    }
+
+    .brand-logo {
+        flex-grow: 1;
+    }
+
+    .navigation-links {
+        order: 3;
+        flex-basis: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .signup-button {
+        padding: 9px 15px;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 45px 20px;
+        gap: 30px;
+    }
+
+    .hero-content,
+    .hero-image-container {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        height: 260px;
+    }
+
+    .features-section {
+        padding: 40px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .feature-list {
+        flex-direction: row;
+        gap: 18px;
+    }
+
+    .feature-card {
+        flex-basis: 100%;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+/* Extra Small Screens */
+@media screen and (max-width: 380px) {
+    .navigation-links {
+        gap: 12px;
+    }
+
+    .navigation-links a {
+        font-size: 13px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+    }
+
+    .start-button,
+    .learn-button {
+        padding: 11px 16px;
+    }
+
+    .footer-links {
+        gap: 18px;
+    }
+}
